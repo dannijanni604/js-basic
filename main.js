@@ -1,34 +1,19 @@
-console.log('Adnan');
-const todoList = [];
-const taskOne = {
-    'id': '01',
-    'title': 'First Task',
-    'date': new Date().toISOString,
-}
+let heading = document.getElementById('heading');
+console.dir(heading);
 
-const taskTwo = {
-    'id': '02',
-    'title': 'Second Task',
-    'date': new Date().toISOString,
-}
+let bodyText = document.getElementsByClassName('bodyText');
+console.dir(bodyText);
 
-const taskThree = {
-    'id': '03',
-    'title': 'Third Task',
-    'date': new Date().toISOString,
-}
+let textFields = document.getElementsByTagName('textarea');
+console.dir(textFields);
 
-todoList.push(taskOne, taskTwo, taskThree);
+let myText = textFields[0].defaultValue;
+textFields[0].defaultValue = myText + " about it";
 
-const id = prompt('Write ID');
+let firstParagraph = document.querySelector('p');
+console.dir(firstParagraph);
 
-const foundIndex = todoList.findIndex((element) => element.id == id);
-console.log(foundIndex);
 
-todoList[foundIndex].title = 'Adnan Ashraf';
+let allParagraphs = document.querySelectorAll('p');
+console.dir(allParagraphs);
 
-console.log('===TODAY TASK===')
-todoList.forEach((element) => {
-    console.log(element.id, element.title);
-});
-console.log('===END===')
