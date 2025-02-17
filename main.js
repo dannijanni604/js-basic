@@ -17,3 +17,7 @@ console.dir(firstParagraph);
 let allParagraphs = document.querySelectorAll('p');
 console.dir(allParagraphs);
 
+let exploreButton = document.querySelector('#exploreBtn');
+exploreButton.onClick = () => {
+    console.log("Explore Button is tapped");
+}
